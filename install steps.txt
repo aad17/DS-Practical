@@ -1,0 +1,23 @@
+install git:
+sudo apt install git
+
+git clone:
+
+
+-----------web service prac:--------------------
+flask:
+pip install flask
+
+(If pip not present, - sudo apt install python3-pip)
+
+------------------RMI----------------------------
+DOWNLOADING JAVA
+step 1) sudo apt install default-jdk
+step 2) sudo apt install default-jre
+step 3) java –version
+
+------------Install Visual Studio Code with Snap in cmd-------
+step 1) sudo snap install --classic code
+step 2)code --version
+
+-----------CORBA-------
