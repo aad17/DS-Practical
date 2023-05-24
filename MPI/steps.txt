@@ -1,0 +1,5 @@
+1) sudo apt install gcc
+2) sudo apt update
+3) sudo apt install -y openmpi-bin libopenmpi-dev
+4) sudo apt install -y python3-dev
+5) pip install mpi4py
