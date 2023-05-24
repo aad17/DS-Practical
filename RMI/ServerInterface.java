@@ -1,0 +1,8 @@
+package RMI;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface ServerInterface extends Remote{
+    int ProcessData(int data) throws RemoteException;
+}
