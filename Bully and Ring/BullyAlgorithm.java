@@ -41,34 +41,24 @@ public class BullyAlgorithm {
         int coordinator = initiatingProcess;
         coordinatorIdx = initiatingProcessIdx;
         for (int i = initiatingProcessIdx + 1; i < processes.length; i++) {
-            System.out.println("Process " + initiatingProcess + " sends message to process " + processes[i] + " with index as: " + i);
+            System.out.println("Process " + coordinator + " sends message to process " + processes[i] + " with index as: " + i);
             if (processes[i] > coordinator) {
-                // System.out.println("Process " + initiatingProcess + " sends message to process " + processes[i] + " with index as: " + i);
-                if (sendMessage(i)) {
-                    System.out.println("Process " + processes[i] + " with index as: " + i + " responded to process " + initiatingProcess);
-                    coordinator = processes[i];
-                    coordinatorIdx = i;
-                }
+                System.out.println("Process " + processes[i] + " with index as: " + i + " responded to process " + coordinator);
+                coordinator = processes[i];
+                coordinatorIdx = i;
             }
         }
 
         for (int i = 0; i < initiatingProcessIdx; i++) {
-            // System.out.println("Process " + initiatingProcess + " sends message to process " + processes[i] + " with index as: " + i);
+            System.out.println("Process " + coordinator + " sends message to process " + processes[i] + " with index as: " + i);
             if(processes[i] > coordinator){
-                // System.out.println("Process " + initiatingProcess + " sends message to process " + processes[i] + " with index as: " + i);
-                if (sendMessage(i)) {
-                    System.out.println("Process " + processes[i] + " with index as: " + i + " responded to process " + initiatingProcess);
-                    coordinator = processes[i];
-                    coordinatorIdx = i;
-                }
+                System.out.println("Process " + processes[i] + " with index as: " + i + " responded to process " + coordinator);
+                coordinator = processes[i];
+                coordinatorIdx = i;
             }
         }
 
         return coordinator;
     }
 
-    public static boolean sendMessage(int processIdx) {
-        // Simulating message sending and receiving
-        return true;
-    }
 }
